@@ -1,0 +1,88 @@
+.trending-container{
+
+  width: 100%-20px;
+  margin-left: 20px;
+
+
+}
+.home-title{
+
+  width: 100%;
+
+}
+.list-novel-trending{
+  width:  100%;
+  display: inline-flex;
+    padding-bottom: 15px;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+}
+.novel{
+  width: 177px;
+  height: 308px;
+  margin: 0 80px 0 0;
+}
+.image-card{
+  width: 177px;
+  height: 264px;
+}
+.description{
+  text-decoration: none;
+}
+.name-card{
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+.list-novel-container{
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.list-novel-realese {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  padding-left: 20px;
+}
+.list-novel-lastest{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.name-novel{
+  text-decoration: none;
+
+}
+.name-card{
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invisible {
+  visibility: hidden;
+}
+.goto-page-listnovel{
+  text-decoration: none;
+}
+.image-card-more{
+
+
+  background-color: beige;
+  width: 177px;
+  height: 264px;
+
+  margin: 0 80px 0 0;
+}
+.middle{
+  text-align: center;
+  padding-top: 88.5px;
+}

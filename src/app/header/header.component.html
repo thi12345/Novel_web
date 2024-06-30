@@ -1,0 +1,32 @@
+
+<header class="site-header">
+  <div class="logo">
+    <a routerLink="/home"><p class="name-logo">READNOVEL</p></a>
+
+  </div>
+  <div class="search-container">
+    <input type="text" placeholder="Search">
+  </div>
+  <div class="account-container" *ngIf="isLoggedIn">
+
+    <a href="#" class=""><mat-icon matBadge="5+"><i class="fa-solid fa-heart icon_header"></i></mat-icon></a>
+    <a href="#" class=""><mat-icon matBadge="5+"><i class="fa-solid fa-bell icon_header"></i></mat-icon></a>
+
+      <button mat-button [mat-menu-trigger-for]="menu" class="infor_header">
+        <p class="user_name_header">{{userName}}</p>
+
+
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>information</span>
+        </button>
+        <button mat-menu-item (click)="onLogout()">
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+
+
+  </div>
+    <a routerLink="/signin" class="login-container"  *ngIf="!isLoggedIn"><p class="user_name_header">Login</p></a>
+</header>

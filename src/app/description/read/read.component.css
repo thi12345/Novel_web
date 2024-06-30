@@ -1,0 +1,32 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.read-container{
+
+  width: 100%;
+  height: 100%;
+
+
+}
+.img-novel-container{
+ text-align: center;
+ padding-top: 20px;
+}
+.img-novel{
+  width: 263px;
+  height: 443px;
+
+}
+.button-read{
+  text-align: center;
+}
+.btn-primary{
+  border-radius: 2px;
+  width: 263px;
+}
+.link-reading{
+  text-decoration: none;
+}
+.read-button{
+  color: #fff;
+  margin: 0;
+  font-size: large;
+}

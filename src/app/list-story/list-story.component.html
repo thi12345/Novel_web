@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="list-story-container">
+  <div class="category-container">
+      <app-filter></app-filter>
+  </div>
+  <div class="story-container">
+    <div class="story-all">
+      <div *ngFor="let story of dataSource" >
+        <div class="novel ">
+          <a [routerLink]="['/descript', story.id]" class="description"><img src="{{story.image}}" class="image-card" ></a>
+          <a [routerLink]="['/descript', story.id]" class="name-novel">
+            <p class="name-card">{{ story.name }}</p>
+          </a>
+
+        </div>
+      </div>
+
+
+      <div *ngIf="((stories.length ) % 3) !== 0" class="novel invisible"></div>
+      <div *ngIf="((stories.length ) % 3) === 1" class="novel invisible"></div>
+
+
+      <mat-paginator class="paginate" [length]="totalLength" [pageSize]="pageSize" showFirstLastButtons (page)="onPageChanged($event)"></mat-paginator>
+    </div>
+
+  </div>
+</div>

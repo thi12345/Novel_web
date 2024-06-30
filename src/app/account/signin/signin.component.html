@@ -1,0 +1,30 @@
+<app-header-account></app-header-account>
+<div class="signin-container">
+  <form action="" class="signin-form" #signinForm="ngForm" (ngSubmit)="login()">
+
+    <p class="login-title">SIGNIN</p>
+
+    <div class="row-control">
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input type="text" matInput placeholder="Username" name="username" [(ngModel)]="username" required />
+      </mat-form-field>
+    </div>
+    <div class="row-control">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="password" required />
+      </mat-form-field>
+    </div>
+    <div class="row-control">
+      <mat-checkbox>Remember me</mat-checkbox>
+    </div>
+    <div class="row-control row-actions">
+      <button mat-raised-button color="primary" type="submit">Sign In</button>
+    </div>
+    <a routerLink="/forgot-pass" class="forgot-pass"><p>Forgot password?</p></a>
+    <br/>
+
+  </form>
+
+</div>

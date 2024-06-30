@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="trending-container">
+  <h2 class="home-title">Trending of the Week</h2>
+  <div class="list-novel-trending" >
+    <div class="novel" *ngFor="let story of trendingStories">
+      <a routerLink="/descript" class="description"><img src="{{story.image}}" class="image-card"></a>
+      <a routerLink="/descript" class="name-novel">
+        <p class="name-card">{{ story.name }}</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+<div class="list-novel-container">
+
+
+  <div class="list-novel-realese">
+    <h2 class="home-title">Lastest Realesed</h2>
+    <div class="list-novel-lastest">
+
+      <div class="novel" *ngFor="let story of getStoriestoShow">
+        <a [routerLink]="['/descript',story.id]" class="description"><img src="{{story.image}}" class="image-card"></a>
+        <a [routerLink]="['/descript',story.id]" class="name-novel">
+          <p class="name-card">{{story.name}}</p>
+        </a>
+      </div>
+      <div class="novel">
+        <a routerLink="/list-story" class="goto-page-listnovel">
+          <div class="image-card-more">
+
+            <h3 class="middle">MORE</h3>
+
+
+          </div>
+        </a>
+      </div>
+      <div *ngIf="(stories.length % storiesperRow) !== 0" class="novel invisible"></div>
+      <!-- <div *ngIf="(stories.length+1 % 3) === 1" class="novel invisible"></div> -->
+    </div>
+  </div>
+</div>
